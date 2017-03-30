@@ -5,6 +5,7 @@ set(bd ${CMAKE_CURRENT_LIST_DIR}/../)
 set(example_sources ${bd}/examples/extern/src/glad.c)
 
 if (APPLE)
+
   set(ed ${bd}/examples/extern/mac)
 
   find_library(fr_corefoundation CoreFoundation)
@@ -29,7 +30,14 @@ if (APPLE)
     )
 
 elseif(WIN32)
+
   set(ed ${bd}/examples/extern/win)
+  
+  list(APPEND example_libs
+    ${ed}/lib/${COMPILER}/glfw3.lib
+    ws2_32.lib
+    )
+
 else()
   message(FATAL_ERROR "For now we only support Mac and Windows")
 endif()

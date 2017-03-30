@@ -45,13 +45,15 @@ do
         debug_flag="_debug"
         if [ "${os}" = "mac" ] ; then 
             debugger="lldb"
-        else
-            debugger="windbg"
         fi
     elif [ "${var}" = "xcode" ] ; then
         build_dir="build_xcode"
         cmake_generator="Xcode"
         build_dir="build_xcode"
+    elif [ "${var}" = "vs2013" ] ; then
+        cmake_generator="Visual Studio 12 2013 Win64"
+        build_dir="build_vs2013"
+        compiler="Msvc2013"
     fi
 done
 
@@ -82,5 +84,5 @@ if [ $? -ne 0 ] ; then
 fi
 
 cd ${id}/bin
-#${debugger} ./example_guir_net_client
-${debugger} ./example_guir_visualisation
+#${debugger} ./example_guir_net_client${debug_flag}
+${debugger} ./example_guir_visualisation${debug_flag}
