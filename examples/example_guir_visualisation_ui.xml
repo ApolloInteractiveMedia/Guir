@@ -1,0 +1,5 @@
+<node type="node" direction="column" padding="10" flexgrow="1.0">
+  <node type="sliderint" title="Circle resolution" name="circle-segments" min="3" max="36" step="1" />
+  <node type="sliderfloat" title="Circle radius" name="circle-radius" min="0.0" max="600" step="0.5" value="120" />
+  <node type="colorpicker" title="Circle color" name="circle-color" />
+</node>
