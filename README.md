@@ -7,16 +7,44 @@ The _Guir_ application acts as a server to which you connect.
 The values in your application will be automatically updated
 when you make changes in _Guir_.
 
+## Prerequisites
+
+### Windows
+
+We have tested this project on Windows 8.1 with Visual Studio 2013 and
+Visual Studio 2015. Make sure to install at least:
+
+- Visual Studio 2013 or
+- Visual Studio 2015
+- Git Bash
+- CMake 3.7+
+
+### Mac
+
+We have tested this project on macOS Sierra 10.12.1, i7 with XCode 8.3.
+Make sure to install:
+
+- XCode 8.3+
+- CMake 3.7+
+
+
 ## Quick Start
 
 The _Guir_ app has been tested on Windows 8.1 and Mac Sierra 10.12.1.
+On Mac open a terminal or on Windows use the Git Bash terminal. Then
+clone this repository and execute:
 
-- Download and extract the library and examples [Guir-v1.zip](https://github.com/ApolloInteractiveMedia/Guir/releases/download/v1.0/Guir-v1.zip)
-- Open a terminal (Git Bash on Windows). Go into the _build_ directory. Execute _release.sh_. 
-- Download the remote _Guir_ application for [Windows](https://github.com/ApolloInteractiveMedia/Guir/releases/download/v1.0/Guir.exe)
-  or [Mac](https://github.com/ApolloInteractiveMedia/Guir/releases/download/v1.0/Guir.app.zip)
-- Open the _Guir_ application, click on the _Load UI_ button and open the _examples/example_guir_visualisation_ui.xml_ file.
+    cd build
+    ./release.sh
 
+This will start the example application in which we draw a circle
+with a radius, color and resolution that you can control with the
+_Guir_ application.
+
+Download _Guir_ for [Windows](https://github.com/ApolloInteractiveMedia/Guir/releases/download/v1.0/Guir.exe)
+or [Mac](https://github.com/ApolloInteractiveMedia/Guir/releases/download/v1.0/Guir.app.zip).
+Once downloaded open it and click on the _Load UI_ button. Open the file `example_guir_visualisation_ui.xml`
+that you find in the examples directory.
 
 ## Background
 
