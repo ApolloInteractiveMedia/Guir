@@ -79,15 +79,7 @@ if (APPLE)
 elseif(WIN32)
   
   list(APPEND libs
-    #Mfplat.lib
-    #Mfuuid.lib
-    #Mf.lib
-    #Mfreadwrite.lib
-    #Shlwapi.lib
-    #Strmiids.lib
-    #wmcodecdspuuid.lib
-    #Avrt.lib
-    #ws2_32.lib
+    ws2_32.lib
     )
 
 endif()
